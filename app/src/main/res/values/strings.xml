@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Copyright 2016 Google LLC
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<resources>
+    <string name="app_name" translatable="false">Hidden Cam Detector</string>
+    <string name="depth_use_explanation" translatable="false">When Depth is enabled on supported devices, virtual objects adapt to the environment by blending in with the real world.</string>
+    <string name="button_text_enable_depth" translatable="false">Enable</string>
+    <string name="button_text_disable_depth" translatable="false">Disable</string>
+    <string name="options_title_with_depth" translatable="false">Your device supports depth</string>
+    <string name="options_title_without_depth" translatable="false">Your device does not support depth</string>
+    <string name="done" translatable="false">Done</string>
+    <string-array name="depth_options_array" translatable="false">
+        <item>Enable depth</item>
+        <item>Show depth map</item>
+    </string-array>
+    <string name="options_title_instant_placement" translatable="false">Instant Placement options</string>
+    <string-array name="instant_placement_options_array" translatable="false">
+        <item>Enable Instant Placement</item>
+    </string-array>
+    <string name="options_title_auto_focus" translatable="false">Auto Focus options</string>
+    <string-array name="auto_focus_options_array" translatable="false">
+        <item>Enable Auto Focus</item>
+    </string-array>
+    <string name="options_title_filters">2D Filter Settings</string>
+    <string name="options_title_ui">UI Settings</string>
+    <string-array name="filters_options_array" translatable="false">
+        <item>Max Size</item>
+        <item>Compactness</item>
+        <item>Bbox Squareness</item>
+        <item>Size-At-Depth</item>
+        <item>In Range</item>
+        <item>ML</item>
+    </string-array>
+    <string name="options_title_filters_3d">3D Filter Settings</string>
+    <string name="blob_lock_progress">Blob Lock Progress:</string>
+    <string name="tooCloseText">Too close! \nPlease move further away!</string>
+    <string name="tooFarText">Too far! \nPlease move closer!</string>
+    <string name="objectNotVisible">Object not visible.\nPlease look at object.</string>
+    <string name="findingReferenceAnchor">(1) Move phone around</string>
+    <string name="waitingForBbox">(2) Draw a box around target object</string>
+    <string name="calculatingIdealDistance">(3) Move phone closer and further from object</string>
+    <string name="scanningObject">(4) Follow scan instructions</string>
+    <string name="unexpectedState">Unexpected state</string>
+    <string-array name="filters_3d_options_array" translatable="false">
+        <item>Remove Small Anchors</item>
+        <item>Decay Anchors</item>
+        <item>FOV Filtering</item>
+    </string-array>
+    <string-array name="ui_options_array" translatable="false">
+        <item>Show Depth Overlay</item>
+        <item>Show Planes</item>
+        <item>Show RGB</item>
+        <item>Show Fullscreen Confidence</item>
+        <item>Show Inset Confidence</item>
+        <item>Show Heatmap</item>
+        <item>Show ARCore Pointcloud</item>
+        <item>Enable Too-Close Warning</item>
+        <item>Enable Locking Vizualization</item>
+        <item>Show Phone Coordinates</item>
+        <item>Enable Movement Speed Warning</item>
+        <item>Show Low Confidence Anchors</item>
+        <item>Color High-Entropy Anchors Always</item>
+        <item>Hide Anchors While Scanning</item>
+        <item>Progress Bar for Individual Squares</item>
+        <item>Draw All FOV Filter Hits</item>
+        <item>Show ML Threshold Seekbar</item>
+        <item>Wait To Create Reference Anchors</item>
+        <item>Update Anchor Positions Over Time</item>
+        <item>Display All Entropy Poses</item>
+        <item>Display Locked Entropy Poses</item>
+        <item>Show All Scanned Distances As Green</item>
+    </string-array>
+
+
+</resources>

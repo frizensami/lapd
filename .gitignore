@@ -1,0 +1,32 @@
+# Android Studio configuration.
+*.iml
+.idea/
+
+# Gradle configuration.
+.gradle/
+build/
+
+# User configuration.
+local.properties
+
+# OS configurations.
+.DS_Store
+
+# Android NDK cmake output.
+.cxx/
+
+#Datafiles
+.hdf5
+
+# Logs
+adb_log.txt
+
+# Swap vim files
+*.swp
+
+.mypy_cache/
+
+out/
+
+# 
+pointFiles/

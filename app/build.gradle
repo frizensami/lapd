@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+def getPhoneConfig() {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    return properties.getProperty("phoneconfig")
+}
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.sensg.phonelidar"
+
+        // AR Optional apps must declare minSdkVersion >= 14.
+        // AR Required apps must declare minSdkVersion >= 24.
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName '1.0'
+    }
+
+    aaptOptions { noCompress "tflite" }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        mlModelBinding true
+    }
+    defaultConfig {
+        buildConfigField "String", "PHONECONFIG", "\"" + getPhoneConfig() + "\""
+    }
+}
+
+dependencies {
+    // ARCore (Google Play Services for AR) library.
+    implementation 'com.google.ar:core:1.23.0'
+
+    // Obj - a simple Wavefront OBJ file loader
+    // https://github.com/javagl/Obj
+    implementation 'de.javagl:obj:0.2.1'
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.quickbirdstudios:opencv:4.3.0-contrib'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0-rc1'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0-rc1'
+    implementation 'org.tensorflow:tensorflow-lite:2.3.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.3.0'
+    // Import the Task Vision Library dependency
+    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.1.0'
+
+    // Required -- JUnit 4 framework
+    testImplementation 'junit:junit:4.12'
+    // Optional -- Robolectric environment
+    testImplementation 'androidx.test:core:1.0.0'
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    // testImplementation 'org.junit.jupiter:junit-jupiter'
+}
